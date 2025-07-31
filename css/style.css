@@ -44,7 +44,6 @@ header {
 .cards-grid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .card {
@@ -52,11 +51,14 @@ header {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+    flex-direction: row;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.2s ease;
+    gap: 2rem;
+    margin: 4rem;
 }
 
 .card:hover {
@@ -143,4 +145,8 @@ header {
         justify-content: center;
         flex-wrap: wrap;
     }
+}
+
+.carousel-inner {
+    max-height: ;
 }
