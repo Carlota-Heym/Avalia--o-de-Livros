@@ -16,7 +16,9 @@ header {
     margin bottom: 0;
     min-height: 17vh;
     position: sticky;
+
 }
+
 
 #Logo {
     height: 15vh;
@@ -147,6 +149,130 @@ header {
     }
 }
 
-.carousel-inner {
-    max-height: ;
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 80vw;
+}
+
+.menu ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+}
+
+/* Estilo base do menu */
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 80vw;
+}
+
+.menu ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFC96D;
+    padding: 1rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo */
+#Logo {
+    height: 15vh;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 70%;
+}
+
+.menu ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+}
+
+/* Hamburger escondido por padrão */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 750px) {
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 101;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        background-color: #FFC96D;
+        width: 100%;
+        height: 100vh;
+        padding: 4rem 2rem;
+        transition: left 0.4s ease-in-out;
+        width: 40%;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
